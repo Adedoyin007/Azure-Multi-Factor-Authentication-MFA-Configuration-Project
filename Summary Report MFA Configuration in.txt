@@ -1,0 +1,33 @@
+Summary Report: MFA Configuration in Azure Portal
+
+Multi-Factor Authentication (MFA) was successfully configured using the Microsoft Azure Portal to enhance account security.
+
+⸻
+
+Configuration Steps
+
+1. Access Azure Portal
+    Logged into the Azure Portal using administrator credentials.
+2. Navigate to Identity Management
+    Opened Microsoft Entra ID from the portal dashboard to manage user authentication settings.
+3. Select User Account
+    Navigated to Users and selected the target user account for MFA configuration.
+4. Configure Authentication Methods
+    Accessed the Authentication Methods section and enabled:
+    * Microsoft Authenticator as the primary method
+    * Email as a backup method
+5. Set Default Sign-In Method
+    Configured Microsoft Authenticator as the default authentication method.
+6. Register Authenticator App
+    Linked the user account with the Microsoft Authenticator app by completing the setup and verification process.
+7. Test MFA Configuration
+    Logged out and signed back in to verify MFA enforcement:
+    * Entered username and password
+    * Approved sign-in via Authenticator (number matching)
+    * Successfully accessed the Azure portal
+
+⸻
+
+Outcome
+
+MFA is now fully operational. Users must complete a second verification step during login, significantly improving account security while maintaining ease of access through app-based authentication and backup options.

@@ -1,0 +1,61 @@
+Authentication Methods Used
+
+1. Microsoft Authenticator (Primary Method)
+
+Microsoft Authenticator was configured as the primary authentication method. It uses push notifications and number matching to verify user identity during login.
+
+Key Features:
+
+* Push-based approval
+* Number matching challenge
+* App-based verification (no reliance on SMS)
+
+⸻
+
+2. Email Verification (Backup Method)
+
+Email was configured as a secondary authentication method to provide account recovery and fallback access if the primary method is unavailable.
+
+Key Features:
+
+* One-time verification codes sent via email
+* Accessible from any device with email access
+
+⸻
+
+Justification of Selection
+
+Security Considerations
+
+* Microsoft Authenticator:
+    * More secure than SMS or email because it is not vulnerable to SIM swap attacks
+    * Number matching reduces risk of accidental or fraudulent approvals
+    * Push notifications ensure real-time user verification
+    * Resistant to phishing compared to traditional OTP methods
+* Email (Backup):
+    * Provides redundancy in case the authenticator app is inaccessible
+    * While less secure than app-based MFA, it ensures account recovery capability
+
+⸻
+
+Usability Considerations
+
+* Microsoft Authenticator:
+    * Quick and user-friendly (one-tap approval)
+    * No need to manually enter codes
+    * Widely supported and easy to set up
+* Email:
+    * Familiar and accessible for all users
+    * Does not require additional apps or devices
+    * Useful as a fallback without adding complexity
+
+⸻
+
+Summary
+
+The combination of Microsoft Authenticator (primary) and email (backup) provides a balanced approach:
+
+* High security through app-based MFA with number matching
+* High usability through simple approval workflows and accessible backup options
+
+This ensures both strong protection against unauthorized access and practical accessibility for legitimate users.

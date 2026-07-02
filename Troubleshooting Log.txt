@@ -1,0 +1,86 @@
+Troubleshooting Log
+
+Issue 1: Unable to Access Conditional Access Policies
+
+Description:
+The option to create or manage Conditional Access policies was not available in the Azure Portal.
+
+Cause:
+The account was using the free tier of Microsoft Azure Portal, which does not include Microsoft Entra ID Premium features required for Conditional Access.
+
+Resolution:
+
+* Verified licensing limitations
+* Proceeded with MFA-only configuration
+* Documented the limitation in the report
+
+⸻
+
+Issue 2: Authenticator App Not Prompting Initially
+
+Description:
+After initial setup, the Microsoft Authenticator app did not immediately send a push notification during login.
+
+Cause:
+
+* App registration not fully completed
+* Notification permissions not enabled on the mobile device
+
+Resolution:
+
+* Re-registered the account in Microsoft Authenticator
+* Enabled push notifications on the device
+* Retested login successfully
+
+⸻
+
+Issue 3: MFA Method Not Set as Default
+
+Description:
+The system did not consistently prompt for the intended authentication method.
+
+Cause:
+Default sign-in method was not explicitly set.
+
+Resolution:
+
+* Navigated to Authentication Methods
+* Set Microsoft Authenticator as the default method
+* Verified consistent MFA prompts during login
+
+⸻
+
+Issue 4: Backup Method Not Configured
+
+Description:
+No alternative authentication method was available if the primary method failed.
+
+Cause:
+Only one authentication method was initially configured.
+
+Resolution:
+
+* Added email as a secondary (backup) authentication method
+* Confirmed availability during account verification
+
+⸻
+
+Issue 5: Initial MFA Test Failure
+
+Description:
+First login test did not trigger MFA as expected.
+
+Cause:
+Session was still active (user not fully signed out).
+
+Resolution:
+
+* Fully signed out of the Azure account
+* Cleared session and re-logged in
+* MFA prompt triggered successfully
+
+⸻
+
+Summary
+
+All encountered issues were resolved through configuration adjustments and verification steps. The MFA setup is now fully functional, with both primary and backup authentication methods working correctly.
